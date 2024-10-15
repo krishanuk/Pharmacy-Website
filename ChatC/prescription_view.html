@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Details</title>
+    <link rel="stylesheet" href="combined_styles.css">
+</head>
+<body>
+    <h1>Prescription Details</h1>
+    <form id="prescriptionDetailsForm" class="left-form" method="POST" action="send_email.php">
+        <div class="form-group">
+            <label for="prescriptionId">Prescription ID:</label>
+            <input type="text" id="prescriptionId" name="prescriptionId" readonly>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="pharmacy">Pharmacy:</label>
+            <input type="text" id="pharmacy" name="pharmacy" readonly>
+        </div>
+        <div class="form-group">
+            <label for="picture">Picture:</label>
+            <img id="picture" src="" alt="Prescription Picture" style="width: 200px;">
+        </div>
+        
+        <!-- New Note Text Area -->
+        <div class="form-group">
+            <label for="note">Add a Note:</label>
+            <textarea id="note" name="note" rows="4" style="width: 100%;" placeholder="Add any additional notes here..."></textarea>
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" class="form-btn">Send Prescription via Email</button>
+        </div>
+    </form>
+    
+
+    <!-- Button linking to scan.html -->
+    <div class="form-group">
+        <button type="button" class="link-btn" onclick="window.location.href='scan.html'">Go to OCR Scan</button>
+    </div>
+
+    <script src="view_prescription_details.js"></script>
+</body>
+</html>

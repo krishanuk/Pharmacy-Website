@@ -1,0 +1,297 @@
+:root {
+    --primary-color: #005073;
+    --secondary-color: #9cd2ce;
+    --card-background-color: #f7fafc;
+    --table-border-color: #b3c7d6;
+    --text-color: #333;
+    --btn-color: #005073;
+    --btn-hover-color: #003b4d;
+    --white: #ffffff;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+.container {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+    background: var(--card-background-color);
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid var(--table-border-color);
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: var(--btn-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: var(--btn-hover-color);
+}
+
+/* Form Styling */
+h1, h2 {
+    color: var(--primary-color);
+    text-align: center;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input[type="text"], textarea, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--table-border-color);
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, textarea:focus, input[type="file"]:focus {
+    border-color: var(--primary-color);
+}
+
+button {
+    background-color: var(--btn-color);
+    color: var(--white);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--btn-hover-color);
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: var(--btn-hover-color);
+    transform: translateY(1px);
+}
+
+form {
+    margin-bottom: 40px;
+}
+
+/* Advice Item Styling */
+.advice-item {
+    background: var(--card-background-color);
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin: 20px auto;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.advice-item h3 {
+    margin: 0;
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.advice-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.advice-item p {
+    color: var(--text-color);
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: var(--card-background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+.advice-item .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.advice-item button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: var(--btn-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.advice-item button:hover {
+    background-color: var(--btn-hover-color);
+}
+
+.advice-item button:last-child {
+    background-color: #dc3545;
+}
+
+.advice-item button:last-child:hover {
+    background-color: #c82333;
+}
+
+.container-bot {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.container-bot h3 {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+#chatbox {
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+#chatbox .chat-message {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#chatbox .bot-message {
+    background-color: #e0e0e0;
+    color: #000;
+    font-family: 'Arial', sans-serif;
+}
+
+#userInput {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .advice-item {
+        padding: 10px;
+    }
+
+    .advice-item img {
+        margin-bottom: 10px;
+    }
+
+    .advice-item .button-container {
+        flex-direction: column;
+    }
+
+    .advice-item .button-container button {
+        margin: 10px 0;
+    }
+}

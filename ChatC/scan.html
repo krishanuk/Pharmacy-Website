@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR Text Recognition</title>
+  <link rel="stylesheet" href="scan_style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Scan Image for Text (Upload or Paste)</h1>
+    
+    <!-- Image Upload Form -->
+    <form id="uploadForm" enctype="multipart/form-data" method="POST" action="upload.php">
+      <div class="upload-box">
+        <input type="file" id="imageInput" name="fileToUpload" accept="image/*">
+      </div>
+    </form>
+
+    <!-- Paste Image Instructions -->
+    <div class="clipboard-box">
+      <h3>Or paste an image (Ctrl + V)</h3>
+      <div id="pasteArea" class="paste-box">
+        <p>Paste image here...</p>
+        <img id="pastedImage" src="" alt="Pasted image" style="display:none; max-width: 100%;">
+      </div>
+    </div>
+    
+    <!-- Scan Button -->
+    <button type="button" id="scanBtn" onclick="scan()">Scan</button>
+
+    <!-- Recognized Text Section -->
+    <h3>Recognized Text:</h3>
+    <div id="output"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+  <script src="scan.js"></script>
+</body>
+</html>

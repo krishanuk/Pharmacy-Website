@@ -1,0 +1,103 @@
+:root {
+    --white: #f0f4f7;
+    --primary-color: #005073;
+    --secondary-color: #9cd2ce;
+    --card-background-color: #f7fafc;
+    --input-background-color: #ffffff;
+    --input-border-color: #b3c7d6;
+    --success-color: #4CAF50;
+    --background-success-color: #c6e7c9;
+    --button-color: #005073;
+    --button-hover-color: #003b4d;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    background-color: var(--card-background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+td {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--input-border-color);
+}
+
+select, input[type="number"] {
+    width: 90%;
+    padding: 6px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    background-color: var(--input-background-color);
+}
+
+input[type="submit"] {
+    background-color: var(--button-color);
+    color: var(--white);
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--button-hover-color);
+}
+
+.success-message {
+    background-color: var(--background-success-color);
+    color: var(--success-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+table td table {
+    width: 100%;
+    border: none;
+}
+
+table td table th {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+table td table td {
+    padding: 6px;
+    text-align: left;
+}
+
+.product-table {
+    margin-bottom: 0;
+    background-color: var(--card-background-color);
+}

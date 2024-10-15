@@ -1,0 +1,114 @@
+:root {
+    --white: #fff;
+    --primary-color: #005073;
+    --secondary-color: #9cd2ce;
+    --card-background-color: #f7fafc;
+    --input-background-color: #ffffff;
+    --input-border-color: #b3c7d6;
+    --success-color: #4CAF50;
+    --background-success-color: #c6e7c9;
+    --button-color: #005073;
+    --button-hover-color: #003b4d;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--card-background-color);
+    color: var(--primary-color);
+    padding: 20px;
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input[type="date"] {
+    background-color: var(--input-background-color);
+    border: 1px solid var(--input-border-color);
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: var(--button-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--button-hover-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid var(--input-border-color);
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--secondary-color);
+}
+
+tfoot {
+    background-color: var(--background-success-color);
+    font-weight: bold;
+}
+
+tfoot td {
+    padding: 15px;
+    color: var(--success-color);
+}
+
+.total-sales {
+    text-align: right;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--success-color);
+}
+
+.print-button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+}
+
+.print-button:hover {
+    background-color: #45a049; 
+}
+
+.print-button:focus {
+    outline: none; 
+}

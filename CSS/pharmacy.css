@@ -1,0 +1,251 @@
+/* CSS/pharmacy.css */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+}
+
+#pharmacy-container {
+    width: 100%;
+}
+
+#pharmacy-header {
+    background-color: #2196F3;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#pharmacy-name {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#pharmacy-address,
+#pharmacy-contact {
+    font-size: 18px;
+}
+
+#main-content {
+    padding: 0 20px 40px 20px;
+}
+
+#content-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar Styles */
+#filter-sidebar {
+    width: 250px;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: fit-content;
+}
+
+#filter-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group {
+    margin-bottom: 30px;
+}
+
+.filter-group h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #2196F3;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+.filter-group input[type="text"],
+.filter-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#filter-form button {
+    padding: 12px;
+    background-color: #2196F3;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#filter-form button:hover {
+    background-color: #1976D2;
+}
+
+/* Products Section Styles */
+#products-section {
+    flex: 1;
+}
+
+#products-heading {
+    font-size: 32px;
+    color: #2196F3;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-name {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 20px;
+    color: #e53935;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.product-brand,
+.product-dosage,
+.product-stock,
+.product-status {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.add-to-cart-form {
+    margin-top: auto;
+}
+
+.add-to-cart-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-to-cart-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-form button:hover {
+    background-color: #388E3C;
+}
+
+.no-products {
+    text-align: center;
+    padding: 50px;
+    font-size: 20px;
+    color: #777;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    #content-wrapper {
+        flex-direction: column;
+    }
+
+    #filter-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 30px;
+    }
+
+    #products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .filter-group input[type="text"],
+    .filter-group input[type="number"],
+    .add-to-cart-form input[type="number"] {
+        font-size: 14px;
+    }
+
+    .product-name {
+        font-size: 20px;
+    }
+
+    .product-price {
+        font-size: 18px;
+    }
+}

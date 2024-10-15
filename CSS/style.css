@@ -1,0 +1,125 @@
+:root{
+        --primary-color: #335e90;
+        --secondary-color: #87c6ec;
+        --success-color: #5eba24;
+        --background-success-color: #c6e7c9;
+}
+
+
+   
+
+    body {
+        background: #99bee3;
+        font-family: 'Poppins', sans-serif;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+
+/* Register page   */
+
+.Rcontents {
+    padding: 20px;
+}
+
+.Rforms {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Rimg {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+/* Login page   */
+
+.Lcontents {
+    padding: 20px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Lcard {
+    padding: 20px; 
+    max-width: 700px;
+    width: 100%; 
+}
+
+.Limg {
+    border-radius: 10px; 
+}
+
+
+.message-container {
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+
+
+/* Error Message */ 
+
+.error-message {
+    color: #d9534f; 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 20px;
+    text-align: center;
+}
+
+.success-message {
+    color: #3c763d; 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 20px;
+    text-align: center;
+}
+
+
+
+/* Mobile Devices Responsive */
+@media (max-width: 768px) {
+    .card, .Rforms {
+        flex-direction: column;
+    }
+
+    .card img, .Rimg {
+        width: 100%; 
+        height: auto; 
+        max-height: 20vh; 
+        object-fit: cover; 
+        margin: 0 auto;
+        display: block;
+    }
+
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+
+    .form-control {
+        padding: 8px;
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

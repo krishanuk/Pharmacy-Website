@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="advice_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        
+        <form id="addForm" enctype="multipart/form-data">
+            <h2>Add New Healthcare Advice</h2>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            <button type="button" onclick="addAdvice()">Add</button>
+        </form>
+
+        <form id="updateForm" enctype="multipart/form-data" style="display: none;">
+            <h2>Edit Healthcare Advice</h2>
+            <input type="hidden" id="updateId" name="id">
+            <label for="updateTitle">Title:</label>
+            <input type="text" id="updateTitle" name="title" required>
+            <label for="updateImage">Image:</label>
+            <input type="file" id="updateImage" name="image" accept="image/*">
+            <label for="updateDescription">Description:</label>
+            <textarea id="updateDescription" name="description" required></textarea>
+            <button type="button" onclick="updateAdvice()">Update</button>
+            <button type="button" onclick="cancelUpdate()">Cancel</button>
+        </form>
+
+        <h2>Manage Healthcare Advice</h2>
+        <div id="adviceList"></div>
+    </div>
+
+
+    <script src="manage_advice.js"></script>
+</body>
+</html>

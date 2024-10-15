@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #90e0ef;
+    --card-background-color: #f0f8ff;
+    --table-border-color: #ced4da;
+    --text-color: #495057;
+    --btn-color: #0077b6;
+    --btn-hover-color: #023e8a;
+    --white: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
+}
+
+body {
+    background-color: var(--card-background-color);
+    font-family: 'Poppins', Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.container {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px var(--shadow-color);
+    transition: transform var(--transition-speed);
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+.table {
+    margin-top: 25px;
+    background-color: var(--white);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.table th, .table td {
+    padding: 15px 20px;
+    border: 1px solid var(--table-border-color);
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.table tbody tr:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: background-color var(--transition-speed);
+}
+
+.table ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.table ul li {
+    padding: 6px 0;
+    font-size: 15px;
+}
+
+.btn {
+    background-color: var(--btn-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0 3px 6px var(--shadow-color);
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.alert {
+    margin-bottom: 25px;
+    font-size: 15px;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 10px 15px;
+    color: var(--primary-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .table th, .table td {
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+}

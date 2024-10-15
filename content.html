@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Advice</title>
+    <link rel="stylesheet" href="advice_styles.css">
+</head>
+<body>
+    <h1>Healthcare Advices</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search advice...">
+            <button onclick="searchAdvice()">Search</button>
+        </div>
+        
+        <div id="adviceContent"></div>
+
+    <div class="container-bot">
+        <h3>Hello! I'm your healthcare advisor. How can I assist you today?</h3>
+        <div id="chatbox">
+            <div class="chat-message bot-message"></div>
+        </div>
+        <input type="text" id="userInput" placeholder="Type your question..." onkeypress="return enterKey(event)">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <script src="content.js"></script>
+</body>
+</html>

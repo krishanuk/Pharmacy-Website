@@ -1,0 +1,67 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Inventory Management</title>
+   
+</head>
+<body>
+    <h1>Pharmacy Inventory Management</h1>
+
+    <!-- Form to add a new product -->
+    <form action="manage_products.php" method="post">
+        <h2>Add New Product</h2>
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required>
+        <label for="pharmacyId">Pharmacy ID:</label>
+        <input type="number" id="pharmacyId" name="pharmacyId" required>
+        <label for="initialStock">Initial Stock:</label>
+        <input type="number" id="initialStock" name="initialStock" required>
+        <label for="minimumStock">Minimum Stock:</label>
+        <input type="number" id="minimumStock" name="minimumStock" required>
+        <button type="submit" name="action" value="add">Add Product</button>
+    </form>
+
+    <!-- Form to handle a sale -->
+    <form action="handle_sale.php" method="post">
+        <h2>Record a Sale</h2>
+        <label for="productId">Product ID:</label>
+        <input type="number" id="productId" name="productId" required>
+        <label for="pharmacyId">Pharmacy ID:</label>
+        <input type="number" id="pharmacyId" name="pharmacyId" required>
+        <label for="quantitySold">Quantity Sold:</label>
+        <input type="number" id="quantitySold" name="quantitySold" required>
+        <button type="submit">Record Sale</button>
+    </form>
+
+    <!-- Form to place a restock order -->
+    <form action="restock_order.php" method="post">
+        <h2>Place Restock Order</h2>
+        <label for="productId">Product ID:</label>
+        <input type="number" id="productId" name="productId" required>
+        <label for="pharmacyId">Pharmacy ID:</label>
+        <input type="number" id="pharmacyId" name="pharmacyId" required>
+        <label for="quantityOrdered">Quantity Ordered:</label>
+        <input type="number" id="quantityOrdered" name="quantityOrdered" required>
+        <button type="submit" name="action" value="placeOrder">Place Order</button>
+    </form>
+
+    <!-- Form to mark a restock order as received -->
+    <form action="restock_order.php" method="post">
+        <h2>Mark Restock Order as Received</h2>
+        <label for="orderId">Order ID:</label>
+        <input type="number" id="orderId" name="orderId" required>
+        <button type="submit" name="action" value="markReceived">Mark as Received</button>
+    </form>
+
+    <!-- Form to generate a stock report -->
+    <form action="generate_report.php" method="get">
+        <h2>Generate Stock Report</h2>
+        <label for="pharmacyId">Pharmacy ID:</label>
+        <input type="number" id="pharmacyId" name="pharmacyId" required>
+        <button type="submit">Generate Report</button>
+    </form>
+</body>
+</html>

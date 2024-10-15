@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription</title>
+    <link rel="stylesheet" href="pre.css">
+</head>
+<body>
+    <h1>Prescription</h1>
+    <form id="prescriptionForm" enctype="multipart/form-data">
+        <div>
+            <label for="picture">Upload Picture:</label>
+            <input type="file" id="picture" name="picture" accept="image/*">
+        </div>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="1">Colombo</option>
+                <option value="2">Nugegoda</option>
+                <option value="3">Rajagiriya</option>
+                <option value="4">Nawala</option>
+                <option value="5">Bambalapitiya</option>
+            </select>
+        </div>
+        <button type="button" id="submitBtn">Add Data</button>
+        <button type="reset" id="clearBtn">Clear</button>
+    </form>
+    <script src="pre.js"></script>
+</body>
+</html>
